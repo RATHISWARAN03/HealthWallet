@@ -1,0 +1,150 @@
+/* ===============================
+   Base Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   Page Background (No Gradient)
+================================ */
+body {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+/* ===============================
+   Container Card
+================================ */
+.form-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  animation: floatIn 0.8s ease;
+}
+
+/* ===============================
+   Title & Subtitle
+================================ */
+.form-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   Inputs & Select
+================================ */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  outline: none;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+/* Focus Animation */
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Placeholder */
+.form-container input::placeholder {
+  color: #94a3b8;
+}
+
+/* ===============================
+   Buttons
+================================ */
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #6366f1;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.primary-btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(99, 102, 241, 0.35);
+}
+
+/* Click Effect */
+.primary-btn:active {
+  transform: scale(0.97);
+}
+
+/* Login Button Slightly Different */
+.primary-btn:nth-of-type(2) {
+  background-color: #0f172a;
+}
+
+.primary-btn:nth-of-type(2):hover {
+  background-color: #020617;
+}
+input {
+  color: black;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 30px 15px;
+    padding: 30px 22px;
+  }
+
+  .form-container h2 {
+    font-size: 22px;
+  }
+}
+
+/* ===============================
+   Animations
+================================ */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

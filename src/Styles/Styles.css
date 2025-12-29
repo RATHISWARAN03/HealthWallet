@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+html,
+body {
+  margin-top: -0.2rem;
+  padding: 0;
+}
+
+main.app-content {
+  margin-top: 1rem;
+  padding-top: 0; /* 🔥 removes space under navbar */
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.app-content {
+  padding: 24px;
+  min-height: calc(100vh - 70px);
+}
+
+/* smooth page animation support */
+.fade-in {
+  animation: fade 0.4s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,137 @@
+/* ===============================
+   REPORTS CONTAINER
+=============================== */
+.reports-section {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(190, 167, 167, 0.06);
+}
+
+/* ===============================
+   SEARCH
+=============================== */
+.report-search {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #848689;
+  margin-bottom: 20px;
+  background-color: #f1f5f9;
+}
+
+/* ===============================
+   TABLE GRID
+=============================== */
+.report-header,
+.report-row {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1.4fr 2.4fr 1.6fr;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===============================
+   HEADER ROW
+=============================== */
+.report-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   DATA ROW
+=============================== */
+.report-row {
+  padding: 14px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+.report-row:hover {
+  background: #f8fafc;
+}
+
+/* ===============================
+   TEXT HANDLING
+=============================== */
+.report-row span {
+  font-size: 14px;
+  color: #020617;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* File column */
+.report-row span:nth-child(4) {
+  color: #475569;
+  font-size: 13px;
+}
+
+/* ===============================
+   ACTION BUTTONS
+=============================== */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions a,
+.actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Colors */
+.view-btn {
+  background: #2563eb;
+}
+.download-btn {
+  background: #16a34a;
+}
+.share-btn {
+  background: #f59e0b;
+}
+
+/* Hover */
+.actions a:hover,
+.actions button:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   EMPTY STATE
+=============================== */
+.empty-text {
+  padding: 16px;
+  color: #64748b;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 900px) {
+  .report-header {
+    display: none;
+  }
+
+  .report-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}
