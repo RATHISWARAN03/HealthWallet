@@ -18,8 +18,6 @@ export default function UploadReport() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // ✅ Required validations
     if (!form.reportType) {
       alert("Please select Report Type");
       return;
@@ -58,8 +56,6 @@ export default function UploadReport() {
   return (
     <form className="upload-card" onSubmit={handleSubmit}>
       <h2>Upload Medical Report</h2>
-
-      {/* REPORT NAME (Dropdown) */}
       <select name="reportName" value={form.reportName} onChange={handleChange}>
         <option value="">Select Report Name</option>
         <option value="Blood Test">Blood Test</option>
@@ -70,7 +66,6 @@ export default function UploadReport() {
         <option value="Scan">Scan</option>
       </select>
 
-      {/* REPORT TYPE (REQUIRED) */}
       <select
         name="reportType"
         value={form.reportType}
@@ -82,7 +77,6 @@ export default function UploadReport() {
         <option value="IMAGE">IMAGE</option>
       </select>
 
-      {/* DATE */}
       <input
         type="date"
         name="date"
@@ -90,14 +84,12 @@ export default function UploadReport() {
         onChange={handleChange}
       />
 
-      {/* FILE */}
       <input
         type="file"
         onChange={(e) => setFile(e.target.files[0])}
         required
       />
 
-      {/* NOTES */}
       <textarea
         name="notes"
         placeholder="Notes (optional)"

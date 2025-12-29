@@ -26,10 +26,7 @@ export default function Login() {
       console.log("Backend response:", response.data);
 
       if (response.data.success === true) {
-        // ✅ STORE USER DATA (VERY IMPORTANT)
         localStorage.setItem("user", JSON.stringify(response.data.user));
-
-        // ✅ REDIRECT
         navigate("/dashboard");
       } else {
         alert("Invalid credentials");

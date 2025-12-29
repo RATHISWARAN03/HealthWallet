@@ -1,5 +1,4 @@
 export default function SummaryCards({ vitals = [] }) {
-  // Find latest value per vital type
   const getVitalValue = (type) => {
     const v = vitals.find((v) => v.vitalType === type);
     return v ? v.vitalValue : "--";

@@ -22,7 +22,7 @@ export default function ReportsList({ reports = [], role }) {
         },
         body: new URLSearchParams({
           reportId: reportId,
-          sharedId: 10, // doctor / family userId
+          sharedId: 10,
           accessType: "READ_ONLY",
         }),
       });
@@ -83,7 +83,6 @@ export default function ReportsList({ reports = [], role }) {
               Download
             </a>
 
-            {/* ✅ ONLY CHANGE IS HERE */}
             {role === "PATIENT" && (
               <button
                 className="share-btn"

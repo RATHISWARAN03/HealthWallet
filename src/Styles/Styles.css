@@ -12,7 +12,7 @@ body {
 
 main.app-content {
   margin-top: 1rem;
-  padding-top: 0; /* 🔥 removes space under navbar */
+  padding-top: 0;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
   min-height: calc(100vh - 70px);
 }
 
-/* smooth page animation support */
 .fade-in {
   animation: fade 0.4s ease-in-out;
 }

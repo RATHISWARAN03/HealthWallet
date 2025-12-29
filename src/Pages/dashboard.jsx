@@ -18,7 +18,6 @@ export default function Dashboard() {
   const [selectedVital, setSelectedVital] = useState("ALL");
   const [range, setRange] = useState("30");
 
-  // 🔐 Auth check
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
 
@@ -28,7 +27,6 @@ export default function Dashboard() {
       const u = JSON.parse(storedUser);
       setUser(u);
 
-      // ✅ Fetch vitals
       axios
         .get(`http://localhost:8080/HealthWallet/vitals?userId=${u.userId}`, {
           withCredentials: true,
@@ -37,7 +35,6 @@ export default function Dashboard() {
         .then((res) => setVitals(res.data || []))
         .catch(() => setVitals([]));
 
-      // ✅ Fetch reports
       axios
         .get(`http://localhost:8080/HealthWallet/reports?userId=${u.userId}`, {
           withCredentials: true,
@@ -48,7 +45,6 @@ export default function Dashboard() {
     }
   }, [navigate]);
 
-  // 🔎 Filter vitals for chart
   const filteredVitals =
     selectedVital === "ALL"
       ? vitals
@@ -62,7 +58,6 @@ export default function Dashboard() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* HEADER */}
       <motion.div
         className="dashboard-header"
         initial={{ opacity: 0, y: -20 }}
@@ -98,8 +93,6 @@ export default function Dashboard() {
           </motion.button>
         </div>
       </motion.div>
-
-      {/* SUMMARY */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -108,7 +101,6 @@ export default function Dashboard() {
         <SummaryCards vitals={vitals} />
       </motion.div>
 
-      {/* FILTERS */}
       <motion.div
         className="vitals-controls"
         initial={{ opacity: 0 }}
@@ -132,7 +124,6 @@ export default function Dashboard() {
         </select>
       </motion.div>
 
-      {/* CHART */}
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -141,7 +132,6 @@ export default function Dashboard() {
         <VitalsChart vitals={filteredVitals} range={range} />
       </motion.div>
 
-      {/* REPORTS */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

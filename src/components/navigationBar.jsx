@@ -20,12 +20,9 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
     >
       <div className="navbar-inner">
-        {/* LEFT */}
         <div className="nav-left">
           <h1 className="logo">Health Wallet</h1>
         </div>
-
-        {/* RIGHT */}
         <div className="nav-right">
           <ul className="nav-links">
             <li>

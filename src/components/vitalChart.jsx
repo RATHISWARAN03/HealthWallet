@@ -29,13 +29,12 @@ export default function VitalsChart({ vitals = [] }) {
 
   const values = vitals.map((v) => {
     if (v.vitalType === "BP") {
-      return parseInt(v.vitalValue.split("/")[0]); // systolic
+      return parseInt(v.vitalValue.split("/")[0]);
     }
     return parseInt(v.vitalValue);
   });
 
-  /* 🎨 HEALTH-TECH COLOR */
-  const lineColor = "#4f46e5"; // Indigo
+  const lineColor = "#4f46e5";
   const fillColor = "rgba(79,70,229,0.15)";
 
   const data = {
@@ -44,8 +43,6 @@ export default function VitalsChart({ vitals = [] }) {
       {
         label: "Vitals Trend",
         data: values,
-
-        /* 🔥 VISUAL IMPROVEMENTS */
         borderColor: lineColor,
         backgroundColor: fillColor,
         fill: true,

@@ -49,9 +49,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* ===============================
-   Inputs & Select
-================================ */
 .form-container input,
 .form-container select {
   width: 100%;
@@ -66,7 +63,6 @@ body {
   color: black;
 }
 
-/* Focus Animation */
 .form-container input:focus,
 .form-container select:focus {
   border-color: #6366f1;
@@ -75,14 +71,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* Placeholder */
 .form-container input::placeholder {
   color: #94a3b8;
 }
 
-/* ===============================
-   Buttons
-================================ */
 .primary-btn {
   width: 100%;
   padding: 14px;
@@ -97,19 +89,16 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 .primary-btn:hover {
   background-color: #4f46e5;
   transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(99, 102, 241, 0.35);
 }
 
-/* Click Effect */
 .primary-btn:active {
   transform: scale(0.97);
 }
 
-/* Login Button Slightly Different */
 .primary-btn:nth-of-type(2) {
   background-color: #0f172a;
 }
@@ -121,9 +110,6 @@ input {
   color: black;
 }
 
-/* ===============================
-   Responsive
-================================ */
 @media (max-width: 480px) {
   .form-container {
     margin: 30px 15px;
@@ -135,9 +121,6 @@ input {
   }
 }
 
-/* ===============================
-   Animations
-================================ */
 @keyframes floatIn {
   from {
     opacity: 0;

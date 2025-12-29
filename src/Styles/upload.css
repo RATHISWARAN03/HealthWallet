@@ -1,13 +1,7 @@
-/* ===============================
-   PAGE BACKGROUND
-=============================== */
 body {
   background: #f8fafc;
 }
 
-/* ===============================
-   UPLOAD CARD
-=============================== */
 .upload-card {
   width: 100%;
   max-width: 460px;
@@ -25,9 +19,6 @@ body {
   animation: fadeUp 0.6s ease-out;
 }
 
-/* ===============================
-   TITLE
-=============================== */
 .upload-card h2 {
   text-align: center;
   font-size: 24px;
@@ -36,9 +27,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===============================
-   INPUTS
-=============================== */
 .upload-card select,
 .upload-card input[type="date"],
 .upload-card input[type="file"],
@@ -54,7 +42,6 @@ body {
   transition: all 0.25s ease;
 }
 
-/* Focus animation */
 .upload-card select:focus,
 .upload-card input:focus,
 .upload-card textarea:focus {
@@ -63,26 +50,17 @@ body {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
 }
 
-/* ===============================
-   FILE INPUT (CLEAN LOOK)
-=============================== */
 .upload-card input[type="file"] {
   padding: 9px;
   cursor: pointer;
   background: #f8fafc;
 }
 
-/* ===============================
-   TEXTAREA
-=============================== */
 .upload-card textarea {
   min-height: 90px;
   resize: none;
 }
 
-/* ===============================
-   SUBMIT BUTTON
-=============================== */
 .upload-card button {
   margin-top: 10px;
   padding: 12px 18px;
@@ -100,7 +78,6 @@ body {
   transition: all 0.25s ease;
 }
 
-/* Hover & tap animation */
 .upload-card button:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 36px rgba(79, 70, 229, 0.45);
@@ -110,9 +87,6 @@ body {
   transform: scale(0.96);
 }
 
-/* ===============================
-   ANIMATION
-=============================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -124,9 +98,6 @@ body {
   }
 }
 
-/* ===============================
-   RESPONSIVE
-=============================== */
 @media (max-width: 520px) {
   .upload-card {
     margin: 30px 16px;
